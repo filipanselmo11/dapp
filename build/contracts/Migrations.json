@@ -1,0 +1,184 @@
+{
+  "contractName": "Migrations",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/filipanselmo/git/tcc/dapp/contracts/Migrations.sol\":\"Migrations\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/filipanselmo/git/tcc/dapp/contracts/Migrations.sol\":{\"keccak256\":\"0x44e4070316c0f4abc49df04ecbad81e77a34f0ee826aff167f596b2d47679477\",\"urls\":[\"bzz-raw://f80acbb02feadd554079d7787615c7206511ae340c65052aae308164ff18138a\",\"dweb:/ipfs/QmbCtWetd7tRan539gUaYnvu3zwviWKn9RnZNyCQQp6uFQ\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582027a427efca939af1747e588f4fdcce8fdd3ded1a3106ce5eb5074e80d48dc8b564736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582027a427efca939af1747e588f4fdcce8fdd3ded1a3106ce5eb5074e80d48dc8b564736f6c63430005100032",
+  "sourceMap": "35:52:1:-;;;59:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:26:1;35:52;;;;;;",
+  "deployedSourceMap": "35:52:1:-;;;;;",
+  "source": "pragma solidity >= 0.5.0 < 0.7.0;\n\ncontract Migrations {\n  constructor() public {\n  }\n}\n",
+  "sourcePath": "/home/filipanselmo/git/tcc/dapp/contracts/Migrations.sol",
+  "ast": {
+    "absolutePath": "/home/filipanselmo/git/tcc/dapp/contracts/Migrations.sol",
+    "exportedSymbols": {
+      "Migrations": [
+        97
+      ]
+    },
+    "id": 98,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 92,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 97,
+        "linearizedBaseContracts": [
+          97
+        ],
+        "name": "Migrations",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 95,
+              "nodeType": "Block",
+              "src": "80:5:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 96,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "70:2:1"
+            },
+            "returnParameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "80:0:1"
+            },
+            "scope": 97,
+            "src": "59:26:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 98,
+        "src": "35:52:1"
+      }
+    ],
+    "src": "0:88:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/filipanselmo/git/tcc/dapp/contracts/Migrations.sol",
+    "exportedSymbols": {
+      "Migrations": [
+        97
+      ]
+    },
+    "id": 98,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 92,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 97,
+        "linearizedBaseContracts": [
+          97
+        ],
+        "name": "Migrations",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 95,
+              "nodeType": "Block",
+              "src": "80:5:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 96,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "70:2:1"
+            },
+            "returnParameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "80:0:1"
+            },
+            "scope": 97,
+            "src": "59:26:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 98,
+        "src": "35:52:1"
+      }
+    ],
+    "src": "0:88:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2021-03-04T18:24:29.803Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

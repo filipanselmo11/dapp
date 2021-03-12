@@ -1,4 +1,4 @@
-import ExameMedico from '@/contracts/ExameMedico.json';
+import ExameMedico from 'src/contracts/ExameMedico.json'
 
 const options = {
     web3: {

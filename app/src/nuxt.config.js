@@ -1,3 +1,0 @@
-{
-    modules: ['vue-ethereum/nuxt']
-}

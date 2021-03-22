@@ -50,7 +50,7 @@
                 class="row p-3 mb-2 bg-success text-white justify-content-between"
               >
                 <h4 class="ml-2">Histórico de Exames Enviados</h4>
-                <button class="btn btn-primary mr-2" @click="getExames">
+                <button class="btn btn-primary mr-2" @click="obterExames">
                   <i class="fas fa-sync-alt"></i>
                 </button>
               </div>
@@ -112,7 +112,7 @@ let nome = "";
   },
 
   created() {
-    this.getExames();
+    this.obterExames();
   },
 
   methods: {
@@ -140,13 +140,6 @@ export default class Paciente extends Vue {
     };
   };
 
-  async verificarPaciente() {
-    const resposta = await this.drizzleInstance.contracts.ExameMedico.methods
-      .getEndPaciente()
-      .call({ from: this.accounts[0] });
-    this.paciente = resposta;
-  }
-
   async onSubmit(event) {
     event.preventDefault();
     let ipfsResponse;
@@ -155,7 +148,7 @@ export default class Paciente extends Vue {
       ipfsResponse = await this.ipfsService.add(this.$store.state.buffer);
       const data = new Date();
       const dataFormatada = data.toLocaleString("pt-BR");
-      this.drizzleInstance.contracts.ExameMedico.methods.set.cacheSend(
+      this.drizzleInstance.contracts.ExameMedico.methods.enviarInfo.cacheSend(
         ipfsResponse.cid.string,
         nome,
         dataFormatada
@@ -164,13 +157,13 @@ export default class Paciente extends Vue {
     }
   }
 
-  async getExames() {
+  async obterExames() {
     const exameTam = await this.drizzleInstance.contracts.ExameMedico.methods
-      .getTam()
+      .tamExames()
       .call({ from: this.accounts[0] });
     for (let i = 0; i < exameTam; i++) {
       const file = await this.drizzleInstance.contracts.ExameMedico.methods
-        .get(i)
+        .obterInfo(i)
         .call({ from: this.accounts[0] });
       this.files.push(file);
     }

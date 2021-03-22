@@ -49,11 +49,11 @@ export default class Table extends Vue {
   files = [];
   async getExames() {
     const exameTam = await this.drizzleInstance.contracts.ExameMedico.methods
-      .getTam()
+      .tamExames()
       .call({ from: this.accounts[0] });
     for (let i = 0; i < exameTam; i++) {
       const file = await this.drizzleInstance.contracts.ExameMedico.methods
-        .get(i)
+        .obterInfo(i)
         .call({ from: this.accounts[0] });
       this.files.push(file);
     }

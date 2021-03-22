@@ -96,7 +96,7 @@ export default class Medico extends Vue {
 
   async verificarPaciente() {
     const resposta = await this.drizzleInstance.contracts.ExameMedico.methods
-      .getEndPaciente()
+      .obterEnderecoDoPaciente()
       .call({ from: this.accounts[0] });
     this.paciente = resposta;
   }

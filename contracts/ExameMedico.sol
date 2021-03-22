@@ -4,25 +4,25 @@ contract ExameMedico {
     constructor() public {}
 
     struct Exame {
-        string endConteudo;
-        string name;
+        string enderecoDoConteudo;
+        string nome;
         string data;
     }
 
 
     mapping(address => Exame[]) exames;
 
-    function set(
-        string memory _endConteudo,
-        string memory _name,
+    function enviarInfo(
+        string memory _enderecoDoConteudo,
+        string memory _nome,
         string memory _data
     ) public {
         exames[msg.sender].push(
-            Exame({endConteudo: _endConteudo, name: _name, data: _data})
+            Exame({enderecoDoConteudo: _enderecoDoConteudo, nome: _nome, data: _data})
         );
     }
 
-    function get(uint256 _index)
+    function obterInfo(uint256 _index)
         public
         view
         returns (
@@ -32,14 +32,14 @@ contract ExameMedico {
         )
     {
         Exame memory exame = exames[msg.sender][_index];
-        return (exame.endConteudo, exame.name, exame.data);
+        return (exame.enderecoDoConteudo, exame.nome, exame.data);
     }
 
-    function getTam() public view returns (uint256) {
+    function tamExames() public view returns (uint256) {
         return exames[msg.sender].length;
     }
 
-    function getEndPaciente() public view returns(address) {
+    function obterEnderecoDoPaciente() public view returns(address) {
       return msg.sender;
     }
 }

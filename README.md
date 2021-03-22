@@ -40,3 +40,12 @@ Após a execução do comando acima, será criado uma pasta chamada build/, que 
 Após ser feito o deploy do contrato, use o comando abaixo para mover a pasta build, que contem o json RPC, do contrato. Para a pasta do front end
 ln -s ../../build/contracts app/src/contracts(Só funciona para distribuições Linux)
 
+
+
+### Ganache e Truffle
+
+Para instalar essas duas ferramentas que foram usadas para o desenvolvimento desse contrato inteligente, execute: 
+
+npm i -g truffle@nodeLTS;
+
+npm i -g ganache-cli.

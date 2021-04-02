@@ -20,7 +20,6 @@
           </div>
         </div>
       </form>
-      <!--- Modal dos Exames --->
       <div>
         <button
           type="button"

@@ -1,3 +1,4 @@
+
 <template>
   <div v-if="isDrizzleInitialized" id="app">
     <router-view/>
@@ -8,8 +9,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { mapGetters } from "vuex";
-
-
 @Component({
   name: "App",
   computed: {

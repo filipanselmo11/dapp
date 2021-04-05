@@ -6,7 +6,7 @@
       <form>
         <div class="d-flex align-items-center">
           <label for="inputEndPaciente" class="col-sm-2 col-form-label sm"
-            >Endereço do Paciente :</label
+            >Endereço do Paciente:</label
           >
           <div class="col-sm-10">
             <input

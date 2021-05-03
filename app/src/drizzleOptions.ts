@@ -6,7 +6,7 @@ const options = {
         fallback: {
             type: 'ws',
             url: 'ws://127.0.0.1:8545'
-            //url: 'wss://kovan.infura.io/ws/v3/85251234652d4e36b814c3f61c179f1c'
+            //url: 'wss://kovan.infura.io/ws/v3/8bbd63ff707c486fba45bc2017a35db0'
         }
     },
     contracts: [ExameMedico],

@@ -21,8 +21,8 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
-//const fs = require('fs');
-const mnemonic = "asset kiwi family step soap effort typical income climb walk crack column";
+const fs = require('fs');
+const secrets = JSON.parse(fs.readFileSync(".secrets.json").toString().trim());
 
 module.exports = {
     /**
@@ -49,9 +49,14 @@ module.exports = {
         },
 
         kovan: {
-            provider: () => new HDWalletProvider(mnemonic, `https://kovan.infura.io/v3/8e258985c8624680bddb981723beb7a6`, 0, 2),
-            network_id: 42,
-            gas: 4000000
+            networkCheckTimeout: 10000,
+            provider: () => {
+                return new HDWalletProvider(
+                    secrets.mnemonic,
+                    `wss://kovan.infura.io/ws/v3/${secrets.projectId}`
+                );
+            },
+            network_id: "42",
         },
 
         // Another network with more advanced options...

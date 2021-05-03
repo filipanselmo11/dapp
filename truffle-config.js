@@ -18,11 +18,11 @@
  *
  */
 
-//const HDWalletProvider = require('@truffle/hdwallet-provider');
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
 //const fs = require('fs');
-//const mnemonic = "asset kiwi family step soap effort typical income climb walk crack column";
+const mnemonic = "asset kiwi family step soap effort typical income climb walk crack column";
 
 module.exports = {
     /**
@@ -48,11 +48,11 @@ module.exports = {
             network_id: "*", // Any network (default: none)
         },
 
-        //kovan: {
-        //provider: () => new HDWalletProvider(mnemonic, `https://kovan.infura.io/v3/8e258985c8624680bddb981723beb7a6`, 0, 2),
-        //network_id: 42,
-        //gas: 4000000
-        //},
+        kovan: {
+            provider: () => new HDWalletProvider(mnemonic, `https://kovan.infura.io/v3/8e258985c8624680bddb981723beb7a6`, 0, 2),
+            network_id: 42,
+            gas: 4000000
+        },
 
         // Another network with more advanced options...
         // advanced: {

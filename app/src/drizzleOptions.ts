@@ -5,8 +5,8 @@ const options = {
         block: false,
         fallback: {
             type: 'ws',
-            url: 'ws://127.0.0.1:8545'
-            //url: 'wss://kovan.infura.io/ws/v3/8bbd63ff707c486fba45bc2017a35db0'
+            //url: 'ws://127.0.0.1:8545'
+            url: 'wss://ropsten.infura.io/ws/v3/' + process.env.INFURA_KEY
         }
     },
     contracts: [ExameMedico],

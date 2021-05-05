@@ -18,11 +18,11 @@
  *
  */
 
+require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
-//
-const fs = require('fs');
-const secrets = JSON.parse(fs.readFileSync(".secrets.json").toString().trim());
+const mnemonic = "asset kiwi family step soap effort typical income climb walk crack column";
+//const fs = require('fs');
 
 module.exports = {
     /**
@@ -48,16 +48,26 @@ module.exports = {
             network_id: "*", // Any network (default: none)
         },
 
-        kovan: {
-            networkCheckTimeout: 10000,
-            provider: () => {
-                return new HDWalletProvider(
-                    secrets.mnemonic,
-                    `wss://kovan.infura.io/ws/v3/${secrets.projectId}`
-                );
-            },
-            network_id: "42",
+        ropsten: {
+            provider: () =>
+                new HDWalletProvider({
+                    mnemonic,
+                    providerOrUrl: 'wss://ropsten.infura.io/ws/v3/' + process.env.INFURA_KEY,
+                    chainId: 3,
+                }),
+            network_id: 3,
+            gas: 5500000,
+            confirmations: 0,
+            timeoutBlocks: 200,
+            skipDryRun: true,
         },
+
+        //kovan: {
+        //provider: () => new HDWalletProvider(mnemonic, "https://kovan.infura.io/v3/83e115b9ddda4b5a8ab1dabac008cc25", 0, 2),
+        //network_id: 42,
+        //gas: 4700000,
+        //networkCheckTimeout: 999999,
+        //},
 
         // Another network with more advanced options...
         // advanced: {

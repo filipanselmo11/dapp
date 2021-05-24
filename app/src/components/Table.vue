@@ -1,7 +1,7 @@
 <template>
   <div>
     <table class="table">
-      <thead class="bg-success text-white">
+      <thead class="bg-primary text-white">
         <th v-for="header in tableHeader" :key="header">{{ header }}</th>
       </thead>
       <tbody>

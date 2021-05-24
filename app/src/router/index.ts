@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
+import HomePage from '../views/HomePage.vue' 
 
 
 Vue.use(VueRouter)
@@ -8,18 +9,21 @@ Vue.use(VueRouter)
 
     {
       path: "/",
-      name: "home",
-      component: () => import('../views/HomePage.vue')
+      name: "HomePage",
+      component: HomePage,
+      meta: { transition: "zoom" },
     },
     {
       path: "/paciente",
-      name: "paciente",
-      component: () => import('../views/Paciente.vue')
+      name: "Paciente",
+      component: () => import('../views/Paciente.vue'),
+      meta: { transition: "zoom" },
     },
     {
       path: "/medico",
-      name: "medico",
-      component: () => import('../views/Medico.vue')
+      name: "Medico",
+      component: () => import('../views/Medico.vue'),
+      meta: { transition: "zoom" },
     }
 ];
 

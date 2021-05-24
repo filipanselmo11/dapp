@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <Navbar />
     <div class="container text-center">
       <h1 class="font-weight-bold display-3 mt-5">Paciente</h1>
@@ -19,12 +19,12 @@
         />
         <br />
         <div class="d-flex justify-content-center">
-          <button @click="onSubmit" class="btn btn-outline-success mt-3 mr-3">
+          <button @click="onSubmit" class="btn btn-primary mt-3 mr-3">
             Enviar
           </button>
           <!-- Large modal -->
           <button
-            class="btn btn-outline-success mt-3 mr-3"
+            class="btn btn-primary mt-3 mr-3"
             data-toggle="modal"
             data-target=".bd-example-modal-lg"
           >
@@ -47,7 +47,7 @@
           <div class="modal-body">
             <div class="text-center mt-3">
               <div
-                class="row p-3 mb-2 bg-success text-white justify-content-between"
+                class="row p-3 mb-2 bg-primary text-white justify-content-between"
               >
                 <h4 class="ml-2">Histórico de Exames Enviados</h4>
                 <button class="btn btn-primary mr-2" @click="obterExames">
@@ -56,7 +56,7 @@
               </div>
             </div>
             <table class="table table-lg">
-              <thead class="bg-success text-white">
+              <thead class="bg-primary text-white">
                 <th v-for="header in tableHeader" :key="header">
                   {{ header }}
                 </th>
@@ -78,7 +78,7 @@
             </table>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-success" data-dismiss="modal">
+            <button type="button" class="btn btn-primary text-white" data-dismiss="modal">
               Fechar
             </button>
           </div>
@@ -86,7 +86,7 @@
       </div>
     </div>
     <Footer />
-  </v-app>
+  </div>
 </template>
 <script>
 import Navbar from "../components/Navbar";

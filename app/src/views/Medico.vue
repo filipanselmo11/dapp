@@ -1,11 +1,11 @@
 <template>
-  <v-app class="text-center">
+  <div class="text-center">
     <Navbar />
     <div class="container">
-      <h1 class="font-weight-bold display-3 mt-5 mb-5">Médico</h1>
+      <h1 class="texto font-weight-bold display-3 mt-5 mb-5">Médico</h1>
       <form>
         <div class="d-flex align-items-center">
-          <label for="inputEndPaciente" class="col-sm-2 col-form-label sm"
+          <label for="texto inputEndPaciente" class="col-sm-2 col-form-label sm"
             >Endereço do Paciente:</label
           >
           <div class="col-sm-10">
@@ -23,7 +23,7 @@
       <div>
         <button
           type="button"
-          class="btn btn-outline-success mt-3"
+          class="btn btn-primary mt-3"
           data-toggle="modal"
           data-target=".bd-example-modal-lg"
           :disabled="botaoDesabilitado"
@@ -40,7 +40,7 @@
         >
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
-              <div class="modal-header bg-success text-white">
+              <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title">Exames do paciente: {{ paciente }}</h5>
                 <button
                   type="button"
@@ -60,7 +60,7 @@
       </div>
     </div>
     <Footer />
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -103,7 +103,7 @@ export default class Medico extends Vue {
 </script>
 
 <style scoped>
-.verde-uea {
-  background-color: #28a745;
+texto {
+  background-color: #fff !important;
 }
 </style>

@@ -21,7 +21,6 @@
 require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
-const mnemonic = "asset kiwi family step soap effort typical income climb walk crack column";
 //const fs = require('fs');
 
 module.exports = {

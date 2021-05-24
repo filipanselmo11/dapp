@@ -13,7 +13,7 @@
   bottom: 0;
   height: 2em;
   width: 100%;
-  background-color: #28a745;
+  background-color: #007bff;
   color: rgb(255, 255, 255);
   text-align: left;
 }
